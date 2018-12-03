@@ -26,10 +26,6 @@ extension CrayonViewController: UITableViewDelegate{
       guard  let indexPath = crayonTableView.indexPathForSelectedRow,
       let destination = segue.destination as? DetaliedViewController else {fatalError("no destination found")}
         let crayon = crayons[indexPath.row]
-        destination.crayonName.text = crayon.name
-        destination.redLabel.text = "\(crayon.red)"
-        destination.greenLabel.text = "\(crayon.green)"
-        destination.blueLabel.text = "\(crayon.blue)"
         destination.crayon = crayon
     }
 }
